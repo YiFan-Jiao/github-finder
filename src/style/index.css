@@ -1,7 +1,9 @@
 body {
     background-color: #1A1924;
+    color: #FFF;
 }
-  
+/* C25F07 橘色*/
+/* 04F174 绿色 */
 .container {
     width: min(100% - 30px, 1200px);
     margin-inline: auto;
@@ -9,65 +11,36 @@ body {
 
 .grid {
     display: grid;
-    
 }
 
-.big-box {
+.search-bar {
     justify-content: center;
     align-content: center;
     height: 100vh;
+    gap: 20PX;
 }
 
-.stars-list {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+.search-eare {
+    grid-template-columns: 7fr 3fr;
+    gap: 20PX;
 }
 
-.stars-yellow {
-    font-size: 100px;
-    /* color: #53535C; */
-    color: #FFDB13;
+H1 {
+    text-align: center;
 }
 
-.stars-gray {
-    font-size: 100px;
-    
+input {
+    width: 300PX;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 22px;
 }
 
-.star-words {
-    color: #fff;
+.btn {
     justify-items: center;
-    padding-top: 20px;
-}
-
-.dialog {
-    text-align: right;
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    width: 800px;
-    height: 100px;
-    background-color: #1A1924;
-}
-
-.real-dialog-show {
-    position: absolute;
-    text-align: left;
-    right: 450px;
-    bottom: 30px;
-    width: 600px;
-    height: 300px;
-    background-color: #1A1924;
-    color: #fff;
-    font-size: 20px;
-}
-
-.btnc {
-    padding: 15px 20px;
-    border-radius: 15px;
-    background-color: #0F71FF;
-    color: #fff;
-}
-
-.not-show {
-    display: none;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #C25F07;
+    cursor: pointer;
 }
