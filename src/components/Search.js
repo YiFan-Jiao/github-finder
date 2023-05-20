@@ -4,6 +4,7 @@ import Axios from 'axios'
 
 function Search() {
     const githubToken = process.env.REACT_APP_GITHUB_TOKEN;
+    console.log(githubToken)
     const [user,setUser] = useState('');
     const [poster,setPoster] = useState(true);
     const getUserName = (event) => {
@@ -16,6 +17,8 @@ function Search() {
         const getJson = async () => {
         try {
             const {data} = await Axios.get(`https://api.github.com/users/${user}`,options);
+
+            
             setPoster(true);
         } catch(error) {
             setPoster(false);
