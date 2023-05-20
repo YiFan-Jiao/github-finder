@@ -16,7 +16,7 @@ function Search() {
     useEffect(()=>{
         const getJson = async () => {
         try {
-            const {data} = await Axios.get(`https://api.github.com/users/${user}`,options);
+            const {data} = await Axios.get(`https://api.github.com/users/${user}`/* ,options */);
 
             
             setPoster(true);

@@ -13,4 +13,7 @@ directly invalidate the token.
 
 I try to put the token in the config or .env file, but it still doesn't work.
 
+The new method, it turns out that these two APIs can be called without a token, 
+just log out the options.
+
 Please click [here](https://yifan-jiao.github.io/github-finder/) to vist the web.

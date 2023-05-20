@@ -20,7 +20,7 @@ function User() {
         
         const getJson = async () => {
         try {
-            const {data} = await Axios.get(`https://api.github.com/users/${username}`,options);
+            const {data} = await Axios.get(`https://api.github.com/users/${username}`/* ,options */);
             //console.log(data)
             setUserImg(data.avatar_url);
             setUNameg(data.name)
@@ -33,7 +33,7 @@ function User() {
         }
 
         try {
-            const {data} = await Axios.get(`https://api.github.com/users/${username}/repos`,options);
+            const {data} = await Axios.get(`https://api.github.com/users/${username}/repos`/* ,options */);
             //console.log(data)
             setReposLists(data)
             
