@@ -9,7 +9,7 @@ function Search() {
             setUser(event.target.value);
     }
 
-    const token = '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';
+    const token = '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';
     const options = {headers: { Authorization: `Bearer ${token}`}};
 
     useEffect(()=>{
