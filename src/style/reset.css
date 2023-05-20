@@ -61,3 +61,8 @@ input, text, button {
 input[type=button], input[type=submit], input[type=reset] {
     cursor: pointer;
 }
+
+a {
+    color: #fff;
+    text-decoration:none;
+}
