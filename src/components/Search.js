@@ -27,7 +27,7 @@ function Search() {
     const notfound = <div>Please enter a correct username</div>
     const moviePoster = <div></div>
 
-    const linkDiv = <Link to={`/user/${(user)}`} className='btn grid' pointer-> 
+    const linkDiv = <Link to={`/user/${(user)}`} className='btn grid'> 
                         <input 
                             className='sub-btn'
                             type='submit' 
@@ -35,17 +35,13 @@ function Search() {
                         />
                     </Link>
 
-    const divNoLink = <Link to={`/github-finder`} className='btn grid' pointer-> 
+    const divNoLink = <Link to={`/github-finder`} className='btn grid'> 
                         <input 
                             className='sub-btn'
                             type='submit' 
                             value='SEARCH'
                         />
                     </Link>
-
-
-
-
   return (
     <main>
         <div className='container'>

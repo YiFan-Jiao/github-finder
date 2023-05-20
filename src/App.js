@@ -10,7 +10,6 @@ function App() {
     <>
     <Routes>
         <Route exact path='/github-finder' element={<Search></Search>}></Route>
-        {/* <Route exact path='/github-finder/user' element={<User></User>}></Route> */}
         <Route exact path='/user/:username' element={<User></User>}></Route>
       </Routes>
     </>
