@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Axios from 'axios'
 /* npm i axios */
+import config from '../config/config'
 
 function User() {
     const [userImg,setUserImg] = useState()
@@ -14,8 +15,7 @@ function User() {
 
     const {username} = useParams();
 
-    const token = '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';
-    const options = {headers: { Authorization: `Bearer ${token}`}};
+    const options = {headers: { Authorization: `Bearer ${config.token}`}};
 
     useEffect(()=>{
         

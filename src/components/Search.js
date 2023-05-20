@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Axios from 'axios'
-
+import config from '../config/config'
 function Search() {
     const [user,setUser] = useState('');
     const [poster,setPoster] = useState(true);
@@ -9,8 +9,8 @@ function Search() {
             setUser(event.target.value);
     }
 
-    const token = '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';
-    const options = {headers: { Authorization: `Bearer ${token}`}};
+    
+    const options = {headers: { Authorization: `Bearer ${config.token}`}};
 
     useEffect(()=>{
         const getJson = async () => {
