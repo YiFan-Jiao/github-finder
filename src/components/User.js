@@ -14,7 +14,7 @@ function User() {
 
     const {username} = useParams();
 
-    const token = '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';
+    const token = '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';
     const options = {headers: { Authorization: `Bearer ${token}`}};
 
     useEffect(()=>{
@@ -89,7 +89,6 @@ function User() {
                     </div>
                 </div>
             ))}
-            
         </div>
     </main>
   )
