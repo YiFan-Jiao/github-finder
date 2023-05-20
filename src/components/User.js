@@ -36,7 +36,6 @@ function User() {
             const {data} = await Axios.get(`https://api.github.com/users/${username}/repos`/* ,options */);
             //console.log(data)
             setReposLists(data)
-            
         } catch(error) {
             //console.log('not found')
         }
@@ -70,7 +69,7 @@ function User() {
             </div>
         </div>
         <div className='container grid repostiories'>
-            <h2>Their repostiories(My descriptions were all empty, so I used links instead)</h2>
+            <h2>Their repostiories</h2>
             { reposLists && reposLists.map(item => (
                 <div className='reops-info grid' key={item.id}>
                     <a href={item.html_url} target='_block'> 
@@ -79,7 +78,7 @@ function User() {
                                 {item.name}
                             </div>
                             <div className='reops-detail'>
-                            {item.html_url}
+                            {item.description}
                             </div>
                         </div>
                     </a>

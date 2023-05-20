@@ -10,15 +10,12 @@ function Search() {
     const getUserName = (event) => {
             setUser(event.target.value);
     }
-
-    const options = {headers: { Authorization: `Bearer ${githubToken}`}};
-
+    /* const options = {headers: { Authorization: `Bearer ${githubToken}`}}; */
         useEffect(()=>{
             const getJson = async () => {
             try {
                 if(user !== '') {
                 const {data} = await Axios.get(`https://api.github.com/users/${user}`/* ,options */);
-    
             }
                 setPoster(true);
             } catch(error) {
@@ -28,8 +25,6 @@ function Search() {
          getJson();
         },[user])
     
-    
-
     const notfound = <div>Please enter a correct username</div>
     const moviePoster = <div></div>
 
