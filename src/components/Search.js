@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Axios from 'axios'
-import config from '../config/config'
+
 function Search() {
+    const githubToken = process.env.REACT_APP_GITHUB_TOKEN;
     const [user,setUser] = useState('');
     const [poster,setPoster] = useState(true);
     const getUserName = (event) => {
             setUser(event.target.value);
     }
 
-    
-    const options = {headers: { Authorization: `Bearer ${config.token}`}};
+    const options = {headers: { Authorization: `Bearer ${githubToken}`}};
 
     useEffect(()=>{
         const getJson = async () => {

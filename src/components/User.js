@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Axios from 'axios'
 /* npm i axios */
-import config from '../config/config'
 
 function User() {
     const [userImg,setUserImg] = useState()
@@ -14,8 +13,8 @@ function User() {
     const [reposLists,setReposLists] = useState()
 
     const {username} = useParams();
-
-    const options = {headers: { Authorization: `Bearer ${config.token}`}};
+    const githubToken = process.env.REACT_APP_GITHUB_TOKEN;
+    const options = {headers: { Authorization: `Bearer ${githubToken}`}};
 
     useEffect(()=>{
         
