@@ -4,7 +4,7 @@ import Axios from 'axios'
 
 function Search() {
     const githubToken = process.env.REACT_APP_GITHUB_TOKEN;
-    console.log(githubToken)
+    //console.log(githubToken)
     const [user,setUser] = useState('');
     const [poster,setPoster] = useState(true);
     const getUserName = (event) => {
