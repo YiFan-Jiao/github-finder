@@ -13,19 +13,22 @@ function Search() {
 
     const options = {headers: { Authorization: `Bearer ${githubToken}`}};
 
-    useEffect(()=>{
-        const getJson = async () => {
-        try {
-            const {data} = await Axios.get(`https://api.github.com/users/${user}`/* ,options */);
-
-            
-            setPoster(true);
-        } catch(error) {
-            setPoster(false);
+        useEffect(()=>{
+            const getJson = async () => {
+            try {
+                if(user !== '') {
+                const {data} = await Axios.get(`https://api.github.com/users/${user}`/* ,options */);
+    
+            }
+                setPoster(true);
+            } catch(error) {
+                setPoster(false);
+            }
         }
-    }
-     getJson();
-    },[user])
+         getJson();
+        },[user])
+    
+    
 
     const notfound = <div>Please enter a correct username</div>
     const moviePoster = <div></div>
