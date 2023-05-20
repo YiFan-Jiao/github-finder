@@ -9,7 +9,7 @@ function Search() {
             setUser(event.target.value);
     }
 
-    const token = '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';
+    const token = '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';
     const options = {headers: { Authorization: `Bearer ${token}`}};
 
     useEffect(()=>{
@@ -55,7 +55,14 @@ function Search() {
                         onChange={getUserName}
                     />
                     
-                    {poster?linkDiv:divNoLink}
+                    {/* {poster?linkDiv:divNoLink} */}
+                    <Link to={`/user/${(user)}`} className='btn grid'> 
+                        <input 
+                            className='sub-btn'
+                            type='submit' 
+                            value='SEARCH'
+                        />
+                    </Link>
                 </div>
                 {poster?moviePoster:notfound}
                 
